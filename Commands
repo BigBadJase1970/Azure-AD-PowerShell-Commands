@@ -1,0 +1,7 @@
+$msolcred = get-credential
+connect-msolservice -credential $msolcred
+
+Get-MsolUser 
+Get-MsolUser -ReturnDeletedUsers
+Remove-MsolUser -UserPrincipalName jamie@ericom.com.au
+Remove-MsolUser -UserPrincipalName jamie@ericom.com.au -RemoveFromRecycleBin -force
